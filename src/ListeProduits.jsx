@@ -4,7 +4,7 @@ import tabProduits from './data/produits.json';
 
 export default function ListeProduits(props) {
 
-    let composantsProduit = [];
+   // let composantsProduit = [];
 
     // 1. Avec la boucle for 
     /* for(let i=0; i<tabProduits.length; i++) {

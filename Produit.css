@@ -1,0 +1,25 @@
+.Produit {
+  width: 240px;
+  height: 480px;
+  margin: 10px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+  overflow: hidden;
+  text-align: center;
+}
+
+.Produit img {
+  width: 100%;
+}
+
+.Produit .info {
+  font-size: 0.85em;
+  line-height: 1.2em;
+}
+
+.Produit .info .nom {
+  margin: 10px;
+  height: 30px;
+}
+/*# sourceMappingURL=Produit.css.map */
