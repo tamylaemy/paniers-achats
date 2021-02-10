@@ -1,14 +1,32 @@
 import './ListeProduits.css';
 import Produit from './Produit';
+import tabProduits from './data/produits.json';
 
 export default function ListeProduits(props) {
+
+    let composantsProduit = [];
+
+    // 1. Avec la boucle for 
+    /* for(let i=0; i<tabProduits.length; i++) {
+         composantsProduit[i] = <Produit nom={tabProduits[0].nom} prix={tabProduits[0].prix} id={tabProduits[0].id} />
+    }; */
+    
+    //2. Avec la méthode for each
+    /* tabProduits.forEach(function(p){
+        composantsProduit.push(<Produit nom={p.nom} prix={p.prix} id={p.id} />)
+    }) */
+
     return (
     <>
         <h2> Produits disponibles</h2>
         <ul className="listeProduits">
-            <Produit nom="Cardigan à capuchon en molleton" prix="76.00" id="prd0001" />
-            <Produit nom="Cardigan rose pâle en molleton" prix="84.95" id="prd0002" />
-            <Produit nom="Cardigan bleu marine ouvert à l’avant" prix="77.00" id="prd0003" />
+            {/* {composantsProduit} */}
+
+            {
+                //Utilisation d'une fonction fléchée
+                tabProduits.map(unProd => <Produit nom={unProd.nom} prix={unProd.prix} id={unProd.id} />)
+            }
+            
         </ul>
     </>
     );
