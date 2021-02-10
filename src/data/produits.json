@@ -15,6 +15,19 @@
         "id" : "prd0003",
         "nom": "Cardigan bleu marine ouvert à l’avant",
         "prix": 77.00
+    },
+
+    {
+        "id" : "prd0004",
+        "nom": "Chandail à manches longues à rayures rouges pures",
+        "prix": 27.00
+    },
+
+    {
+        "id" : "prd0005",
+        "nom": "Pull surdimensionné orange",
+        "prix": 33.99
     }
+    
 
 ]
