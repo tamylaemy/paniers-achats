@@ -1,4 +1,4 @@
-import './Entete.css';
+import './Entete.scss';
 
 function Entete(props) {
     return (
