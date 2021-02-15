@@ -13,7 +13,7 @@ function Entete(props) {
             </ul>
             <ul className="navUtilisateur">
                 <li>
-                    <Badge>
+                    <Badge badgeContent={15} color="secondary">
                         <ShoppingCartIcon/>
                     </Badge>
                     </li>
