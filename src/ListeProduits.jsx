@@ -24,7 +24,7 @@ export default function ListeProduits(props) {
 
             {
                 //Utilisation d'une fonction fléchée
-                tabProduits.map(unProd => <Produit nom={unProd.nom} prix={unProd.prix} id={unProd.id} />)
+                tabProduits.map(unProd => <Produit etatPanier= {props.etatPanier} nom={unProd.nom} prix={unProd.prix} id={unProd.id} />)
             }
             
         </ul>
