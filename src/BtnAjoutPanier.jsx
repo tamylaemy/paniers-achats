@@ -3,10 +3,12 @@ import './BtnAjoutPanier.scss';
 
 export default function BtnAjoutPanier(props) {
     return (
-        <Badge badgeContent={0} color="primary">
-            <button className="BtnAjoutPanier" onClick={props.onClick}>
-                Ajouter au panier
+        <Badge badgeContent={props.qte} color="primary">
+            <button className={'BtnAjoutPanier ' + props.classeCSS} onClick={props.onClick}>
+                {props.texte}
             </button>
         </Badge>
     );
 }
+
+// style={{backgroundColor: props.couleur}}

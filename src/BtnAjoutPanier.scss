@@ -7,4 +7,8 @@ width: 200px;
 height: 50px;
 cursor: pointer;
 outline: none;
+
+&.rouge {
+    background-color: #dc143c;
+}
 }
