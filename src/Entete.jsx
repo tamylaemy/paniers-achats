@@ -35,7 +35,7 @@ export default function Entete(props) {
                     <Badge badgeContent={Object.values(panier).reduce((acc, article) => acc + article.qte, 0)} color="secondary">
                         <ShoppingCartIcon/>
                     </Badge>
-                    <SommairePanier etatPanier={props.etatPanier}/>
+                    <SommairePanier panier={panier}/>
                     </li>
                 <li>Mon compte</li>
             </ul>
