@@ -25,11 +25,11 @@ export default function Entete(props) {
     
     return (
         <header className="Entete">
-            <div className="logo"><Link to="/accueil">Logo</Link></div>
+            <div className="logo"><Link to="/">Logo</Link></div>
             <ul className="navPrincipale">
-                <li><Link to="/nos-produits">Produits</Link></li>
-                <li><Link to="/a-propos-de-nous">À propos de nous</Link></li>
-                <li><Link to="/contactez-nous">Contactez-nous</Link></li>
+                <li><NavLink activeClassName="urlActive" to="/nos-produits">Produits</NavLink></li>
+                <li><NavLink activeClassName="urlActive" to="/a-propos-de-nous">À propos de nous</NavLink></li>
+                <li><NavLink activeClassName="urlActive" to="/contactez-nous">Contactez-nous</NavLink></li>
             </ul>
             <ul className="navUtilisateur">
                 <li>
