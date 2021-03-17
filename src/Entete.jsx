@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 export default function Entete(props) {
     console.log("Etat panier dans l'Entête :", props.etatPanier);
     // Notez la "décomposition" de tableau
-    const [panier, setPanier] = props.etatPanier;
+    const [panier] = props.etatPanier;
     // console.log("Le panier :", panier);
     // const articlesTab = Object.values(panier);
     // console.log("Les articles dans un tableau :", articlesTab);
