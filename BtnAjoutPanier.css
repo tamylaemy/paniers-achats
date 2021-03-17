@@ -8,4 +8,8 @@
   cursor: pointer;
   outline: none;
 }
+
+.BtnAjoutPanier.rouge {
+  background-color: #dc143c;
+}
 /*# sourceMappingURL=BtnAjoutPanier.css.map */
