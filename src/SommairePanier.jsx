@@ -1,7 +1,6 @@
 import "./SommairePanier.scss";
 
 export default function SommairePanier(props) {
-  console.log("Le panier  dans SommairePanier : ", props.panier);
   const info = calculerInfoPanier(props.panier);
   return (
     <div className="SommairePanier">
@@ -35,7 +34,6 @@ function calculerInfoPanier(objetPanier) {
 
   // Extraire le tableau des valeurs de l'objet contenant le panier
   const articles = Object.values(objetPanier);
-  //console.log("Le tableau des articles dans le panier : ", articles);
 
   // Nombre d'articles différents
   objetInfo.articlesDiff = articles.length;
@@ -43,17 +41,22 @@ function calculerInfoPanier(objetPanier) {
   // Nombre d'articles total
   objetInfo.nbArticlesTotal = articles.reduce((acc, article) => acc + article.qte, 0);
 
-  // Sous-total du panier (corriger au retour de la semaine de relâche pour ne pas arrondir avant le calcul des taxes)
-  objetInfo.sousTotal = articles.reduce((acc, article) => acc + (article.qte*article.prix), 0).toFixed(2);
+    // Remarquez que pour les 3 valeurs suivantes les valeurs calculées sont séparées des valeurs formatées
+
+  // Sous-total du panier 
+  const sousTotal = articles.reduce((acc, article) => acc + (article.qte * article.prix), 0);
+  objetInfo.sousTotal = sousTotal.toFixed(2);
 
   // TPS
-  objetInfo.tps = (objetInfo.sousTotal * 0.05).toFixed(2);
+  const tps = sousTotal * 0.05;
+  objetInfo.tps = tps.toFixed(2);
 
   // TVQ 
-  objetInfo.tvq = (objetInfo.sousTotal * 0.09975).toFixed(2);
+  const tvq = sousTotal * 0.09975;
+  objetInfo.tvq = tvq.toFixed(2)
 
-  // Total (à corriger une fois que nous aurons gardé les nombres sans toFixed())
-  objetInfo.total = ((objetInfo.sousTotal - 0) + (objetInfo.tps - 0) + (objetInfo.tvq - 0)).toFixed(2);
+  // Total (on utilise les valeurs calculées et non pas les valeurs formatées)
+  objetInfo.total = (sousTotal + tps + tvq).toFixed(2);
 
   return objetInfo;
 }
